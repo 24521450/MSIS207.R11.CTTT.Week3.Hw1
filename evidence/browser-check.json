@@ -559,7 +559,7 @@
     "keyboardValue": "0.5",
     "analyserAt72PercentDbfs": -27.6,
     "analyserAt0Percent": "−∞ dBFS",
-    "analyserAt50PercentDbfs": -30.3
+    "analyserAt50PercentDbfs": -29.3
   },
   "muteControl": {
     "toggledOnAndOff": true,
@@ -905,7 +905,7 @@
           },
           {
             "target": [
-              "time[datetime=\"2026-11-02T14:59:47.454Z\"]"
+              "time[datetime=\"2026-11-02T15:04:25.965Z\"]"
             ],
             "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
           },
@@ -929,7 +929,7 @@
           },
           {
             "target": [
-              "time[datetime=\"2026-11-02T14:59:47.399Z\"]"
+              "time[datetime=\"2026-11-02T15:04:25.553Z\"]"
             ],
             "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
           },
@@ -953,7 +953,7 @@
           },
           {
             "target": [
-              "time[datetime=\"2026-11-02T14:59:47.352Z\"]"
+              "time[datetime=\"2026-11-02T15:04:25.134Z\"]"
             ],
             "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
           },
@@ -977,7 +977,7 @@
           },
           {
             "target": [
-              "time[datetime=\"2026-11-02T14:59:47.186Z\"]"
+              "time[datetime=\"2026-11-02T15:04:24.697Z\"]"
             ],
             "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
           },
@@ -1001,7 +1001,7 @@
           },
           {
             "target": [
-              "time[datetime=\"2026-11-02T14:59:46.792Z\"]"
+              "time[datetime=\"2026-11-02T15:04:24.298Z\"]"
             ],
             "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
           },
@@ -1025,7 +1025,7 @@
           },
           {
             "target": [
-              "time[datetime=\"2026-11-02T14:59:46.369Z\"]"
+              "time[datetime=\"2026-11-02T15:04:23.896Z\"]"
             ],
             "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
           },
@@ -1049,7 +1049,7 @@
           },
           {
             "target": [
-              "time[datetime=\"2026-11-02T14:59:45.952Z\"]"
+              "time[datetime=\"2026-11-02T15:04:23.480Z\"]"
             ],
             "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
           },
@@ -1073,7 +1073,7 @@
           },
           {
             "target": [
-              "time[datetime=\"2026-11-02T14:59:45.548Z\"]"
+              "time[datetime=\"2026-11-02T15:04:23.050Z\"]"
             ],
             "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
           },
@@ -1129,8 +1129,8 @@
     "failedRequests": []
   },
   "run": {
-    "url": "http://127.0.0.1:4173/MSIS207.R11.CTTT.Week3.Hw1/",
-    "timestamp": "2026-11-02T14:59:48.032Z",
+    "url": "https://24521450.github.io/MSIS207.R11.CTTT.Week3.Hw1/",
+    "timestamp": "2026-11-02T15:04:26.558Z",
     "node": "v24.15.0",
     "chrome": "156.0.8078.79",
     "platform": "Windows_NT 10.0.26300 x64"

@@ -9,20 +9,22 @@ Ngày thực hiện: **02/11/2026**. Mọi ảnh và số liệu ở thư mục 
 - `npm run lint`: thành công, không còn cảnh báo.
 - `npm test -- --reporter=dot`: **19/19 test**, 3 test files.
 - `npm run build`: thành công; Vite tạo `dist/`.
-- `npm run verify:browser`: thành công trên Chrome headless, production preview tại `http://127.0.0.1:4173/MSIS207.R11.CTTT.Week3.Hw1/`.
+- `npm run verify:browser`: thành công trên Chrome headless, production preview tại `http://127.0.0.1:4173/MSIS207.R11.CTTT.Week3.Hw1/`; sau deploy cùng lệnh được chạy lại trên URL Pages thật, là URL hiện có trong [`browser-check.json`](browser-check.json).
 - Lighthouse trên production preview: Performance 100, Accessibility 100, Best Practices 100, SEO 100. Điều kiện và báo cáo hồi quy mới nằm trong [`reports/lighthouse/`](../reports/lighthouse/).
 
 ## Hồi quy pointer và keyboard
 
-- Mouse regression dùng `page.mouse.move/down/up` thật: hit được ghi ngay lúc pointerdown; kéo khỏi pad rồi thả trả `aria-pressed=false`; click tương thích sau pointerup không tạo hit thứ hai.
+- Mouse regression dùng `page.mouse.move/down/up` thật cả trên preview và site live: hit được ghi ngay lúc pointerdown; kéo khỏi pad rồi thả trả `aria-pressed=false`; click tương thích sau pointerup không tạo hit thứ hai.
 - Playwright giữ Enter và Space qua ba keydown liên tiếp: mỗi lần giữ tạo một hit, keyup kết thúc lần nhấn, lần nhấn tiếp theo vẫn hoạt động. `.click()` không có pointer cũng tạo hit.
 - Mobile touch tap tạo đúng một hit. Unit tests kiểm tra hai `pointerId` trên hai pad, hai pointer cùng giữ một pad, pointercancel, lost capture, window blur và hidden tab.
 - Browser report ghi 0 page error, console error, failed request và 0 axe violation ở desktop/mobile. Shortcut, volume/mute, analyser meter, history và aria-live đều tiếp tục đạt.
 
-## GitHub Pages trước lần deploy hồi quy này
+## GitHub Pages sau deploy hồi quy
 
-- GitHub Pages được cấu hình deploy bằng Actions và bật HTTPS. Bản live trước thay đổi hồi quy này đã chạy từ commit `14ed83d46c74752d8d01e4bf650bca6da410e316` qua [workflow run 41389396125](https://github.com/24521450/MSIS207.R11.CTTT.Week3.Hw1/actions/runs/41389396125).
-- Báo cáo browser và ảnh ở lần kiểm chứng này được tạo từ production preview cục bộ; site live sẽ được kiểm tra lại sau khi push regression fix.
+- Commit regression `d8e73f93bc702ccdda658ffdec416b2ec5d1e55e` được push lên `main`; [Actions run 41467705062](https://github.com/24521450/MSIS207.R11.CTTT.Week3.Hw1/actions/runs/41467705062) hoàn tất build và deploy thành công.
+- Trang [GitHub Pages](https://24521450.github.io/MSIS207.R11.CTTT.Week3.Hw1/) trả HTTP 200 với đúng tiêu đề; JavaScript và CSS bundle cũng trả HTTP 200.
+- Browser regression sau deploy: mouse drag-out, Enter/Space repeat, click không pointer, touch và các luồng hiện có đều đạt; axe desktop 23 rules và mobile 25 rules, 0 violation; không có page error, console error hoặc request thất bại.
+- `browser-check.json` cùng ảnh desktop/mobile là kết quả post-deploy trên URL live.
 
 ## Trình duyệt, tương tác và accessibility
 
@@ -36,8 +38,8 @@ Playwright kiểm tra phím vật lý `KeyW`, editable target, phím tắt tắt
 
 ### Ảnh và báo cáo
 
-- [`desktop.png`](desktop.png): giao diện production preview trên desktop, `1440 × 1000`.
-- [`mobile.png`](mobile.png): giao diện production preview trên mobile, `390 × 844`, ảnh chụp toàn trang.
+- [`desktop.png`](desktop.png): giao diện site live trên desktop, `1440 × 1000`.
+- [`mobile.png`](mobile.png): giao diện site live trên mobile, `390 × 844`, ảnh chụp toàn trang.
 - [`keyboard-focus.png`](keyboard-focus.png): skip link đang focus, viền focus nhìn thấy rõ.
 - [`browser-check.json`](browser-check.json): điều kiện chạy, axe, tương phản, kích thước và kiểm tra tương tác chi tiết.
 
