@@ -9,8 +9,15 @@ Ngày thực hiện: **02/11/2026**. Mọi ảnh và số liệu ở thư mục 
 - `npm run lint`: thành công, không còn cảnh báo.
 - `npm test -- --reporter=dot`: **14/14 test**, 3 test files.
 - `npm run build`: thành công; Vite tạo `dist/`.
-- `npm run verify:browser`: thành công trên Chrome headless, production preview tại `http://127.0.0.1:4173/MSIS207.R11.CTTT.Week3.Hw1/`.
+- `npm run verify:browser`: thành công trên Chrome headless. Lượt kiểm tra trước deploy dùng production preview cục bộ; báo cáo browser hiện tại được chạy lại sau deploy trên trang GitHub Pages thật ở `https://24521450.github.io/MSIS207.R11.CTTT.Week3.Hw1/`.
 - Lighthouse: Performance 100, Accessibility 100, Best Practices 100, SEO 100. Điều kiện và báo cáo nằm trong [`reports/lighthouse/`](../reports/lighthouse/).
+
+## Deploy và xác minh sau deploy
+
+- GitHub Actions run [41389013695](https://github.com/24521450/MSIS207.R11.CTTT.Week3.Hw1/actions/runs/41389013695) hoàn tất thành công cho commit `695913b4872dd1913f4bdfcf3b9d76d471c85d65`; cả job build và deploy đều pass.
+- GitHub Pages dùng nguồn `GitHub Actions`, HTTPS được bật. Trang demo trả HTTP 200 với đúng tiêu đề; bundle JavaScript và stylesheet cũng trả HTTP 200.
+- Browser check sau deploy trên URL thật: 7 pad hiển thị, kiểm tra tương tác desktop/mobile và Web Audio đạt, axe có 0 violation trên desktop/mobile, không có page error, console error hoặc request thất bại.
+- [`browser-check.json`](browser-check.json) và ba ảnh chụp trong thư mục này là kết quả lần chạy trên site live.
 
 ## Trình duyệt, tương tác và accessibility
 
@@ -24,8 +31,8 @@ Playwright kiểm tra phím vật lý `KeyW`, trạng thái press/release, form 
 
 ### Ảnh và báo cáo
 
-- [`desktop.png`](desktop.png): giao diện desktop, `1440 × 1000`.
-- [`mobile.png`](mobile.png): giao diện mobile, `390 × 844`, ảnh chụp toàn trang.
+- [`desktop.png`](desktop.png): giao diện site live trên desktop, `1440 × 1000`.
+- [`mobile.png`](mobile.png): giao diện site live trên mobile, `390 × 844`, ảnh chụp toàn trang.
 - [`keyboard-focus.png`](keyboard-focus.png): skip link đang focus, viền focus nhìn thấy rõ.
 - [`browser-check.json`](browser-check.json): điều kiện chạy, axe, tương phản, kích thước và kiểm tra tương tác chi tiết.
 

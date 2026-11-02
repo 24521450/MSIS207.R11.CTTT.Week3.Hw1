@@ -54,7 +54,7 @@ npm run preview -- --host 127.0.0.1 --port 4173
 npm run verify:browser
 ```
 
-Browser check chạy trên Chrome với bản preview production, axe-core WCAG A/AA, bàn phím/pointer, volume/mute và analyser, toggle shortcut, viewport mobile, reduced motion và ảnh chụp. Báo cáo cùng ảnh ở [`evidence/`](evidence/). Lighthouse HTML/JSON và điều kiện chạy được lưu ở [`reports/lighthouse/`](reports/lighthouse/). Các công cụ tự động không chứng minh đầy đủ WCAG; chỉ ghi nhận screen reader nếu có phiên thử thực tế. Xem [kết quả kiểm chứng](evidence/verification.md) để biết các mục còn chưa kiểm tra.
+Browser check mặc định chạy Chrome trên local production preview; sau deploy, cùng bộ tương tác/axe được chạy lại trên [site live](https://24521450.github.io/MSIS207.R11.CTTT.Week3.Hw1/). Báo cáo browser và ảnh chụp desktop/mobile nằm ở [`evidence/`](evidence/). Lighthouse HTML/JSON cùng điều kiện chạy production build được lưu ở [`reports/lighthouse/`](reports/lighthouse/). Các công cụ tự động không chứng minh đầy đủ WCAG; chỉ ghi nhận screen reader nếu có phiên thử thực tế. Xem [kết quả kiểm chứng](evidence/verification.md) để biết các mục còn chưa kiểm tra.
 
 ## Giới hạn và demo
 
