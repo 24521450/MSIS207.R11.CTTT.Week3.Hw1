@@ -142,6 +142,7 @@ try {
   const page = await browser.newPage({
     viewport: { width: 1440, height: 1000 },
     deviceScaleFactor: 1,
+    hasTouch: true,
   })
   page.on('pageerror', (error) => pageErrors.push(error.message))
   page.on('console', (message) => {
@@ -272,21 +273,65 @@ try {
 
   const snare = page.getByRole('button', { name: /^Snare/ })
   await snare.focus()
-  const beforeNativeKeys = await totalHitCount(page)
+  let beforeNativeKeys = await totalHitCount(page)
+  await page.keyboard.down('Enter')
+  await page.keyboard.down('Enter')
+  await page.keyboard.down('Enter')
+  await page.waitForFunction(
+    (before) => Number(document.querySelector('.counter-value')?.textContent) === before + 1,
+    beforeNativeKeys,
+  )
+  await page.keyboard.up('Enter')
+  assert.equal(await totalHitCount(page), beforeNativeKeys + 1)
   await page.keyboard.press('Enter')
-  await page.keyboard.press('Space')
   assert.equal(await totalHitCount(page), beforeNativeKeys + 2)
-  checks.nativeButtonKeys = { enterHits: 1, spaceHits: 1 }
+
+  beforeNativeKeys = await totalHitCount(page)
+  await page.keyboard.down(' ')
+  await page.keyboard.down(' ')
+  await page.keyboard.down(' ')
+  await page.keyboard.up(' ')
+  assert.equal(await totalHitCount(page), beforeNativeKeys + 1)
+  await page.keyboard.press(' ')
+  assert.equal(await totalHitCount(page), beforeNativeKeys + 2)
+  checks.nativeButtonKeys = {
+    enterHeldHits: 1,
+    enterNextPressWorks: true,
+    spaceHeldHits: 1,
+    spaceNextPressWorks: true,
+  }
+
+  const beforeProgrammaticClick = await totalHitCount(page)
+  await snare.evaluate((button) => button.click())
+  assert.equal(await totalHitCount(page), beforeProgrammaticClick + 1)
+  checks.programmaticButtonClick = { hitWithoutPointer: true }
 
   const kick = page.locator('.drum-pad--kick')
-  await kick.dispatchEvent('pointerdown', { button: 0, pointerId: 41 })
+  const kickBox = await kick.boundingBox()
+  assert.ok(kickBox, 'Kick pad must have a visible pointer target')
+  const pointerStart = await totalHitCount(page)
+  await page.mouse.move(kickBox.x + kickBox.width / 2, kickBox.y + kickBox.height / 2)
+  await page.mouse.down()
+  await page.waitForFunction(
+    (before) => Number(document.querySelector('.counter-value')?.textContent) === before + 1,
+    pointerStart,
+  )
   assert.equal(await kick.getAttribute('aria-pressed'), 'true')
-  await kick.dispatchEvent('pointercancel', { button: 0, pointerId: 41 })
+  await page.mouse.move(1430, 990)
+  assert.equal(await kick.getAttribute('aria-pressed'), 'true')
+  await page.mouse.up()
+  await page.waitForFunction(
+    () => document.querySelector('.drum-pad--kick')?.getAttribute('aria-pressed') === 'false',
+    undefined,
+    { timeout: 3000 },
+  )
   assert.equal(await kick.getAttribute('aria-pressed'), 'false')
-  const beforePointerClick = await totalHitCount(page)
-  await kick.click()
-  assert.equal(await totalHitCount(page), beforePointerClick + 1)
-  checks.pointer = { clickHitOnce: true, pointerCancelReleased: true }
+  assert.equal(await totalHitCount(page), pointerStart + 1)
+  checks.pointerMouse = {
+    downPlayedImmediately: true,
+    dragOutsideAndReleaseClearedPressedState: true,
+    compatibilityClickDidNotDoubleHit: true,
+  }
 
   for (let index = 0; index < 9; index += 1) {
     await page.getByRole('button', { name: /^Tom 2/ }).click()
@@ -313,6 +358,18 @@ try {
   await page.screenshot({ path: resolve(evidenceDir, 'mobile.png'), fullPage: true })
   checks.mobile = mobileLayout
   checks.axeMobile = await axeCheck(page)
+
+  const touchPad = page.locator('.drum-pad--snare')
+  const touchBox = await touchPad.boundingBox()
+  assert.ok(touchBox, 'Snare pad must have a visible touch target')
+  const beforeTouch = await totalHitCount(page)
+  await page.touchscreen.tap(
+    touchBox.x + touchBox.width / 2,
+    touchBox.y + touchBox.height / 2,
+  )
+  assert.equal(await totalHitCount(page), beforeTouch + 1)
+  assert.equal(await touchPad.getAttribute('aria-pressed'), 'false')
+  checks.touch = { oneHitPerTap: true, releasedAfterTap: true }
 
   await page.emulateMedia({ reducedMotion: 'reduce' })
   const reducedMotionDuration = await page

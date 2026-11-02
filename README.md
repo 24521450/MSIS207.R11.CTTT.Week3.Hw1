@@ -29,15 +29,15 @@ Sau đó mở `http://127.0.0.1:4173/MSIS207.R11.CTTT.Week3.Hw1/`.
 | K | Crash |
 | L | Kick |
 
-Nhấn hoặc chạm pad để chơi; khi pad đang được chọn, Enter và Space dùng hành vi native của button. Công tắc “Phím tắt bàn phím” tắt riêng các phím trống. Thanh trượt chỉnh volume master; “Tắt tiếng” mute âm thanh nhưng vẫn ghi lại lượt đánh. Âm thanh được khởi tạo lười ở lần chơi đầu tiên và resume sau thao tác người dùng.
+Nhấn hoặc chạm pad để phát tiếng ngay khi bắt đầu nhấn; thả tay sẽ giải phóng trạng thái pad. Enter/Space dùng hành vi native của button và giữ phím không lặp hit. Công tắc “Phím tắt bàn phím” tắt riêng các phím trống. Thanh trượt chỉnh volume master; “Tắt tiếng” mute âm thanh nhưng vẫn ghi lại lượt đánh. Âm thanh được khởi tạo lười ở lần chơi đầu tiên và resume sau thao tác người dùng.
 
 ## Kiến trúc
 
 - `src/drums.ts`: bảy pad, mapping `KeyboardEvent.code`, model lịch sử và giới hạn tám mục.
 - `src/hooks/useDrumKeyboard.ts`: listener keydown/keyup cấp window, trạng thái phím giữ, composition/editable guard và giải phóng khi blur/tab ẩn.
 - `src/audio.ts` và `src/hooks/useAudioEngine.ts`: bảy tiếng tổng hợp, master gain, compressor, analyser và lifecycle cleanup.
-- `src/components/DrumPad.tsx`: button có tên truy cập, `aria-pressed`, pointer cancel và native Enter/Space.
-- `src/App.tsx`: bàn trộn, meter dBFS, hit history và thông báo live gộp theo lượt đánh nhanh.
+- `src/components/DrumPad.tsx`: button có tên truy cập, `aria-pressed`, pointer capture, pointerdown trigger và guard auto-repeat Enter/Space.
+- `src/App.tsx`: bàn trộn, meter dBFS, hit history, thông báo live gộp và nguồn pointer tách theo `pointerId`.
 
 ## Âm thanh và bản quyền
 
@@ -54,7 +54,7 @@ npm run preview -- --host 127.0.0.1 --port 4173
 npm run verify:browser
 ```
 
-Browser check mặc định chạy Chrome trên local production preview; sau deploy, cùng bộ tương tác/axe được chạy lại trên [site live](https://24521450.github.io/MSIS207.R11.CTTT.Week3.Hw1/). Báo cáo browser và ảnh chụp desktop/mobile nằm ở [`evidence/`](evidence/). Lighthouse HTML/JSON cùng điều kiện chạy production build được lưu ở [`reports/lighthouse/`](reports/lighthouse/). Các công cụ tự động không chứng minh đầy đủ WCAG; chỉ ghi nhận screen reader nếu có phiên thử thực tế. Xem [kết quả kiểm chứng](evidence/verification.md) để biết các mục còn chưa kiểm tra.
+Regression suite gồm **19 unit test** và Playwright trên local production preview. Browser check dùng chuột thật move/down/up để kéo pad ra ngoài, kiểm tra hit tại pointerdown, giữ Enter/Space với nhiều keydown lặp, activation bằng `.click()`, touch tap, axe desktop/mobile, volume/mute/meter và history. Báo cáo browser và ảnh chụp nằm ở [`evidence/`](evidence/); Lighthouse HTML/JSON cùng điều kiện chạy build nằm ở [`reports/lighthouse/`](reports/lighthouse/). Các công cụ tự động không chứng minh đầy đủ WCAG; chỉ ghi nhận screen reader nếu có phiên thử thực tế. Xem [kết quả kiểm chứng](evidence/verification.md) để biết các mục còn chưa kiểm tra.
 
 ## Giới hạn và demo
 

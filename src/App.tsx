@@ -29,7 +29,9 @@ export default function App() {
   const [totalHitCount, setTotalHitCount] = useState(0)
   const [history, setHistory] = useState<HitRecord[]>([])
   const [announcedHit, setAnnouncedHit] = useState('Chưa có nhịp gõ.')
-  const [pointerPadId, setPointerPadId] = useState<PadId | null>(null)
+  const [pointerSources, setPointerSources] = useState<Map<number, PadId>>(
+    () => new Map(),
+  )
   const [flashPadId, setFlashPadId] = useState<PadId | null>(null)
   const [meterDbfs, setMeterDbfs] = useState(Number.NEGATIVE_INFINITY)
   const { graphRef, play, audioError } = useAudioEngine(volume, muted)
@@ -38,6 +40,7 @@ export default function App() {
   const announcementTimer = useRef<ReturnType<typeof setTimeout> | null>(null)
   const flashTimer = useRef<ReturnType<typeof setTimeout> | null>(null)
   const previousMeterValue = useRef(Number.NEGATIVE_INFINITY)
+  const pointerSourcesRef = useRef<Map<number, PadId>>(new Map())
 
   const triggerPad = useCallback(
     (padId: PadId) => {
@@ -93,6 +96,51 @@ export default function App() {
     keyboardEnabled,
   )
 
+  const startPointer = useCallback((padId: PadId, pointerId: number) => {
+    if (pointerSourcesRef.current.has(pointerId)) return false
+
+    const nextSources = new Map(pointerSourcesRef.current)
+    nextSources.set(pointerId, padId)
+    pointerSourcesRef.current = nextSources
+    setPointerSources(nextSources)
+    return true
+  }, [])
+
+  const endPointer = useCallback((pointerId: number, padId?: PadId) => {
+    const currentPadId = pointerSourcesRef.current.get(pointerId)
+    if (!currentPadId || (padId && padId !== currentPadId)) return
+
+    const nextSources = new Map(pointerSourcesRef.current)
+    nextSources.delete(pointerId)
+    pointerSourcesRef.current = nextSources
+    setPointerSources(nextSources)
+  }, [])
+
+  useEffect(() => {
+    const releasePointer = (event: globalThis.PointerEvent) => {
+      endPointer(event.pointerId)
+    }
+    const clearPointerSources = () => {
+      if (pointerSourcesRef.current.size === 0) return
+      pointerSourcesRef.current = new Map()
+      setPointerSources(new Map())
+    }
+    const clearPointerSourcesWhenHidden = () => {
+      if (document.hidden) clearPointerSources()
+    }
+
+    window.addEventListener('pointerup', releasePointer, true)
+    window.addEventListener('pointercancel', releasePointer, true)
+    window.addEventListener('blur', clearPointerSources)
+    document.addEventListener('visibilitychange', clearPointerSourcesWhenHidden)
+    return () => {
+      window.removeEventListener('pointerup', releasePointer, true)
+      window.removeEventListener('pointercancel', releasePointer, true)
+      window.removeEventListener('blur', clearPointerSources)
+      document.removeEventListener('visibilitychange', clearPointerSourcesWhenHidden)
+    }
+  }, [endPointer])
+
   useEffect(
     () => () => {
       if (announcementTimer.current) clearTimeout(announcementTimer.current)
@@ -136,6 +184,7 @@ export default function App() {
   const meterLabel = Number.isFinite(meterDbfs)
     ? `${meterDbfs.toFixed(1)} dBFS`
     : '−∞ dBFS'
+  const pointerPadIds = new Set(pointerSources.values())
 
   return (
     <>
@@ -186,19 +235,18 @@ export default function App() {
 
             <div className="pad-grid">
               {DRUM_PADS.map((pad) => {
-                const active =
-                  activeKeyboardPads.has(pad.id) ||
-                  pointerPadId === pad.id ||
-                  flashPadId === pad.id
+                const pressed =
+                  activeKeyboardPads.has(pad.id) || pointerPadIds.has(pad.id)
+                const active = pressed || flashPadId === pad.id
                 return (
                   <DrumPad
                     key={pad.id}
                     pad={pad}
                     active={active}
+                    pressed={pressed}
                     onHit={() => triggerPad(pad.id)}
-                    onContactChange={(id, isActive) =>
-                      setPointerPadId(isActive ? id : null)
-                    }
+                    onPointerStart={startPointer}
+                    onPointerEnd={(id, pointerId) => endPointer(pointerId, id)}
                   />
                 )
               })}

@@ -1,6 +1,34 @@
 # Báo cáo Lighthouse
 
-## Lượt đo production cuối
+## Lượt đo production sau hồi quy pointer/keyboard
+
+| Hạng mục | Điểm |
+| --- | ---: |
+| Performance | 100/100 |
+| Accessibility | 100/100 |
+| Best Practices | 100/100 |
+| SEO | 100/100 |
+
+Lượt đo chạy ngày **02/11/2026, 14:59 (Asia/Saigon)** trên production preview tại `http://127.0.0.1:4173/MSIS207.R11.CTTT.Week3.Hw1/`, sau khi build lại source hồi quy. Lighthouse `13.5.0`; Node.js `v24.15.0`; npm `12.0.2`; Windows 11 build `26300`; Headless Chrome `156.0.8078.79`.
+
+Preset desktop: viewport `1350 × 940`, device scale factor `1`, CPU slowdown `1×`; simulated network RTT `40 ms`, throughput `10,240 Kbps`. Điểm chỉ mô tả lượt đo trên môi trường này.
+
+- [HTML report](2026-11-02-pointer-keyboard-regression.report.html)
+- [JSON report](2026-11-02-pointer-keyboard-regression.report.json)
+
+Lệnh đã chạy:
+
+```powershell
+npx lighthouse http://127.0.0.1:4173/MSIS207.R11.CTTT.Week3.Hw1/ `
+  --only-categories=performance,accessibility,best-practices,seo `
+  --preset=desktop `
+  --chrome-path='C:\Program Files\Google\Chrome\Application\chrome.exe' `
+  --chrome-flags='--headless=new' `
+  --output=html --output=json `
+  --output-path=reports/lighthouse/2026-11-02-pointer-keyboard-regression --quiet
+```
+
+## Lượt đo production trước khi thêm hồi quy
 
 | Hạng mục | Điểm |
 | --- | ---: |

@@ -557,9 +557,9 @@
   },
   "volumeControl": {
     "keyboardValue": "0.5",
-    "analyserAt72PercentDbfs": -37.9,
+    "analyserAt72PercentDbfs": -27.6,
     "analyserAt0Percent": "−∞ dBFS",
-    "analyserAt50PercentDbfs": -28.8
+    "analyserAt50PercentDbfs": -30.3
   },
   "muteControl": {
     "toggledOnAndOff": true,
@@ -578,16 +578,22 @@
     "pointerStillWorks": true
   },
   "nativeButtonKeys": {
-    "enterHits": 1,
-    "spaceHits": 1
+    "enterHeldHits": 1,
+    "enterNextPressWorks": true,
+    "spaceHeldHits": 1,
+    "spaceNextPressWorks": true
   },
-  "pointer": {
-    "clickHitOnce": true,
-    "pointerCancelReleased": true
+  "programmaticButtonClick": {
+    "hitWithoutPointer": true
+  },
+  "pointerMouse": {
+    "downPlayedImmediately": true,
+    "dragOutsideAndReleaseClearedPressedState": true,
+    "compatibilityClickDidNotDoubleHit": true
   },
   "history": {
     "capacity": 8,
-    "sessionTotal": 19,
+    "sessionTotal": 22,
     "newestFirst": true
   },
   "mobile": {
@@ -899,7 +905,7 @@
           },
           {
             "target": [
-              "time[datetime=\"2026-11-02T04:33:27.194Z\"]"
+              "time[datetime=\"2026-11-02T14:59:47.454Z\"]"
             ],
             "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
           },
@@ -923,7 +929,7 @@
           },
           {
             "target": [
-              "time[datetime=\"2026-11-02T04:33:27.148Z\"]"
+              "time[datetime=\"2026-11-02T14:59:47.399Z\"]"
             ],
             "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
           },
@@ -947,7 +953,7 @@
           },
           {
             "target": [
-              "time[datetime=\"2026-11-02T04:33:26.986Z\"]"
+              "time[datetime=\"2026-11-02T14:59:47.352Z\"]"
             ],
             "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
           },
@@ -971,7 +977,7 @@
           },
           {
             "target": [
-              "time[datetime=\"2026-11-02T04:33:26.578Z\"]"
+              "time[datetime=\"2026-11-02T14:59:47.186Z\"]"
             ],
             "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
           },
@@ -995,7 +1001,7 @@
           },
           {
             "target": [
-              "time[datetime=\"2026-11-02T04:33:26.163Z\"]"
+              "time[datetime=\"2026-11-02T14:59:46.792Z\"]"
             ],
             "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
           },
@@ -1019,7 +1025,7 @@
           },
           {
             "target": [
-              "time[datetime=\"2026-11-02T04:33:25.761Z\"]"
+              "time[datetime=\"2026-11-02T14:59:46.369Z\"]"
             ],
             "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
           },
@@ -1043,7 +1049,7 @@
           },
           {
             "target": [
-              "time[datetime=\"2026-11-02T04:33:25.365Z\"]"
+              "time[datetime=\"2026-11-02T14:59:45.952Z\"]"
             ],
             "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
           },
@@ -1067,7 +1073,7 @@
           },
           {
             "target": [
-              "time[datetime=\"2026-11-02T04:33:24.932Z\"]"
+              "time[datetime=\"2026-11-02T14:59:45.548Z\"]"
             ],
             "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
           },
@@ -1104,6 +1110,10 @@
       }
     ]
   },
+  "touch": {
+    "oneHitPerTap": true,
+    "releasedAfterTap": true
+  },
   "reducedMotion": {
     "preference": "reduce",
     "transitionDuration": "1e-05s"
@@ -1119,8 +1129,8 @@
     "failedRequests": []
   },
   "run": {
-    "url": "https://24521450.github.io/MSIS207.R11.CTTT.Week3.Hw1/",
-    "timestamp": "2026-11-02T04:33:27.723Z",
+    "url": "http://127.0.0.1:4173/MSIS207.R11.CTTT.Week3.Hw1/",
+    "timestamp": "2026-11-02T14:59:48.032Z",
     "node": "v24.15.0",
     "chrome": "156.0.8078.79",
     "platform": "Windows_NT 10.0.26300 x64"
