@@ -1,0 +1,1128 @@
+{
+  "desktop": {
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "pads": 7
+  },
+  "axeDesktop": {
+    "passes": 23,
+    "violations": [],
+    "incomplete": [
+      {
+        "id": "color-contrast",
+        "nodes": [
+          {
+            "target": [
+              ".brand-name"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+          },
+          {
+            "target": [
+              ".brand-name > span"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+          },
+          {
+            "target": [
+              ".session-chip > span:nth-child(2)"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+          },
+          {
+            "target": [
+              ".intro-block > .eyebrow"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+          },
+          {
+            "target": [
+              "#studio-title"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+          },
+          {
+            "target": [
+              ".intro-copy"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+          },
+          {
+            "target": [
+              ".counter-value"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+          },
+          {
+            "target": [
+              ".counter-label"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+          },
+          {
+            "target": [
+              ".instrument-heading > h2"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+          },
+          {
+            "target": [
+              ".keyboard-hint > span:nth-child(2)"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+          },
+          {
+            "target": [
+              ".drum-pad--tom.drum-pad:nth-child(1) > .pad-copy > .pad-name"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+          },
+          {
+            "target": [
+              ".drum-pad--tom.drum-pad:nth-child(1) > .pad-copy > .pad-status"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+          },
+          {
+            "target": [
+              ".drum-pad--tom.drum-pad:nth-child(2) > .pad-copy > .pad-name"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+          },
+          {
+            "target": [
+              ".drum-pad--tom.drum-pad:nth-child(2) > .pad-copy > .pad-status"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+          },
+          {
+            "target": [
+              ".drum-pad--tom.drum-pad:nth-child(3) > .pad-copy > .pad-name"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+          },
+          {
+            "target": [
+              ".drum-pad--tom.drum-pad:nth-child(3) > .pad-copy > .pad-status"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+          },
+          {
+            "target": [
+              ".drum-pad--tom.drum-pad:nth-child(4) > .pad-copy > .pad-name"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+          },
+          {
+            "target": [
+              ".drum-pad--tom.drum-pad:nth-child(4) > .pad-copy > .pad-status"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+          },
+          {
+            "target": [
+              ".drum-pad--snare > .pad-copy > .pad-name"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+          },
+          {
+            "target": [
+              ".drum-pad--snare > .pad-copy > .pad-status"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+          },
+          {
+            "target": [
+              ".drum-pad--crash > .pad-copy > .pad-name"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+          },
+          {
+            "target": [
+              ".drum-pad--crash > .pad-copy > .pad-status"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+          },
+          {
+            "target": [
+              ".drum-pad--kick > .pad-copy > .pad-name"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+          },
+          {
+            "target": [
+              ".drum-pad--kick > .pad-copy > .pad-status"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+          },
+          {
+            "target": [
+              ".hint-icon"
+            ],
+            "summary": "Fix any of the following:\n  Element content contains only non-text characters"
+          },
+          {
+            "target": [
+              ".hint-strip > p:nth-child(2)"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+          },
+          {
+            "target": [
+              "p:nth-child(4)"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+          },
+          {
+            "target": [
+              ".control-card > .card-heading > div > .eyebrow"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+          },
+          {
+            "target": [
+              "#control-title"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+          },
+          {
+            "target": [
+              ".card-icon"
+            ],
+            "summary": "Fix any of the following:\n  Element content contains only non-text characters"
+          },
+          {
+            "target": [
+              "label"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+          },
+          {
+            "target": [
+              ".volume-value"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+          },
+          {
+            "target": [
+              ".range-labels > span:nth-child(1)"
+            ],
+            "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+          },
+          {
+            "target": [
+              ".range-labels > span:nth-child(2)"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+          },
+          {
+            "target": [
+              ".range-labels > span:nth-child(3)"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+          },
+          {
+            "target": [
+              ".mute-icon"
+            ],
+            "summary": "Fix any of the following:\n  Element content contains only non-text characters"
+          },
+          {
+            "target": [
+              ".meter-heading > span"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+          },
+          {
+            "target": [
+              ".meter-reading"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+          },
+          {
+            "target": [
+              ".meter-scale > span:nth-child(1)"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+          },
+          {
+            "target": [
+              ".meter-scale > span:nth-child(2)"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+          },
+          {
+            "target": [
+              ".meter-scale > span:nth-child(3)"
+            ],
+            "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+          },
+          {
+            "target": [
+              ".setting-title"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+          },
+          {
+            "target": [
+              ".setting-subtitle"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+          },
+          {
+            "target": [
+              ".history-heading > div > .eyebrow"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+          },
+          {
+            "target": [
+              "#history-title"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+          },
+          {
+            "target": [
+              ".history-count"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+          },
+          {
+            "target": [
+              ".history-empty"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+          },
+          {
+            "target": [
+              ".history-footer > span:nth-child(2)"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+          },
+          {
+            "target": [
+              "footer > span:nth-child(1)"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+          },
+          {
+            "target": [
+              "footer > span:nth-child(2)"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+          }
+        ]
+      },
+      {
+        "id": "label-content-name-mismatch",
+        "nodes": [
+          {
+            "target": [
+              ".switch"
+            ],
+            "summary": "Fix any of the following:\n  Text inside the element may be value text rather than a label"
+          }
+        ]
+      }
+    ]
+  },
+  "contrastSamples": [
+    {
+      "name": "body text / base canvas",
+      "kind": "text",
+      "foreground": "rgb(240, 238, 232)",
+      "background": "#11171f",
+      "threshold": 4.5,
+      "ratio": 15.52,
+      "result": "pass"
+    },
+    {
+      "name": "intro copy / base canvas",
+      "kind": "text",
+      "foreground": "rgb(178, 189, 201)",
+      "background": "#11171f",
+      "threshold": 4.5,
+      "ratio": 9.45,
+      "result": "pass"
+    },
+    {
+      "name": "subdued label / base canvas",
+      "kind": "text",
+      "foreground": "rgb(141, 155, 170)",
+      "background": "#11171f",
+      "threshold": 4.5,
+      "ratio": 6.35,
+      "result": "pass"
+    },
+    {
+      "name": "accent metadata / base canvas",
+      "kind": "text",
+      "foreground": "rgb(231, 173, 105)",
+      "background": "#11171f",
+      "threshold": 4.5,
+      "ratio": 9.07,
+      "result": "pass"
+    },
+    {
+      "name": "session chip / base canvas",
+      "kind": "text",
+      "foreground": "rgb(198, 208, 216)",
+      "background": "#11171f",
+      "threshold": 4.5,
+      "ratio": 11.5,
+      "result": "pass"
+    },
+    {
+      "name": "counter value / base canvas",
+      "kind": "text",
+      "foreground": "rgb(230, 188, 137)",
+      "background": "#11171f",
+      "threshold": 4.5,
+      "ratio": 10.22,
+      "result": "pass"
+    },
+    {
+      "name": "pad status / lightest pad surface",
+      "kind": "text",
+      "foreground": "rgb(178, 189, 201)",
+      "background": "#252f3a",
+      "threshold": 4.5,
+      "ratio": 7.12,
+      "result": "pass"
+    },
+    {
+      "name": "empty history copy / panel",
+      "kind": "text",
+      "foreground": "rgb(178, 189, 201)",
+      "background": "#171f29",
+      "threshold": 4.5,
+      "ratio": 8.71,
+      "result": "pass"
+    },
+    {
+      "name": "range labels / panel",
+      "kind": "text",
+      "foreground": "rgb(141, 155, 170)",
+      "background": "#171f29",
+      "threshold": 4.5,
+      "ratio": 5.85,
+      "result": "pass"
+    },
+    {
+      "name": "mute button text / button surface",
+      "kind": "text",
+      "foreground": "rgb(239, 240, 237)",
+      "background": "#222c36",
+      "threshold": 4.5,
+      "ratio": 12.39,
+      "result": "pass"
+    },
+    {
+      "name": "meter title / panel",
+      "kind": "text",
+      "foreground": "rgb(220, 225, 228)",
+      "background": "#171f29",
+      "threshold": 4.5,
+      "ratio": 12.6,
+      "result": "pass"
+    },
+    {
+      "name": "meter scale / panel",
+      "kind": "text",
+      "foreground": "rgb(170, 182, 193)",
+      "background": "#171f29",
+      "threshold": 4.5,
+      "ratio": 8.04,
+      "result": "pass"
+    },
+    {
+      "name": "history name / panel",
+      "kind": "text",
+      "foreground": "#e8e9e7",
+      "background": "#171f29",
+      "threshold": 4.5,
+      "ratio": 13.63,
+      "result": "pass"
+    },
+    {
+      "name": "history time / panel",
+      "kind": "text",
+      "foreground": "#adb8c2",
+      "background": "#171f29",
+      "threshold": 4.5,
+      "ratio": 8.23,
+      "result": "pass"
+    },
+    {
+      "name": "switch label / enabled switch",
+      "kind": "text",
+      "foreground": "rgb(224, 229, 232)",
+      "background": "#26392e",
+      "threshold": 4.5,
+      "ratio": 9.69,
+      "result": "pass"
+    },
+    {
+      "name": "hint copy / hint surface",
+      "kind": "text",
+      "foreground": "rgb(189, 198, 207)",
+      "background": "#19222c",
+      "threshold": 4.5,
+      "ratio": 9.29,
+      "result": "pass"
+    },
+    {
+      "name": "keycap label / keycap surface",
+      "kind": "text",
+      "foreground": "#e6c28f",
+      "background": "#171e26",
+      "threshold": 4.5,
+      "ratio": 9.98,
+      "result": "pass"
+    },
+    {
+      "name": "focus ring / page canvas",
+      "kind": "non-text",
+      "foreground": "#f4c889",
+      "background": "#11171f",
+      "threshold": 3,
+      "ratio": 11.55,
+      "result": "pass"
+    },
+    {
+      "name": "pad border / lightest pad surface",
+      "kind": "non-text",
+      "foreground": "rgb(130, 144, 156)",
+      "background": "#252f3a",
+      "threshold": 3,
+      "ratio": 4.15,
+      "result": "pass"
+    },
+    {
+      "name": "mute border / mute surface",
+      "kind": "non-text",
+      "foreground": "rgb(105, 119, 131)",
+      "background": "#222c36",
+      "threshold": 3,
+      "ratio": 3.08,
+      "result": "pass"
+    },
+    {
+      "name": "enabled switch border / switch surface",
+      "kind": "non-text",
+      "foreground": "rgb(99, 145, 111)",
+      "background": "#26392e",
+      "threshold": 3,
+      "ratio": 3.4,
+      "result": "pass"
+    },
+    {
+      "name": "slider rail border / rail",
+      "kind": "non-text",
+      "foreground": "#7c8893",
+      "background": "#303b46",
+      "threshold": 3,
+      "ratio": 3.15,
+      "result": "pass"
+    },
+    {
+      "name": "meter border / meter surface",
+      "kind": "non-text",
+      "foreground": "rgb(105, 119, 131)",
+      "background": "#121820",
+      "threshold": 3,
+      "ratio": 3.88,
+      "result": "pass"
+    },
+    {
+      "name": "control card border / card surface",
+      "kind": "non-text",
+      "foreground": "rgb(105, 119, 131)",
+      "background": "#1b242e",
+      "threshold": 3,
+      "ratio": 3.41,
+      "result": "pass"
+    }
+  ],
+  "keyboardFocus": {
+    "skipLinkVisible": true,
+    "skipTargetFocused": true
+  },
+  "physicalKeyboard": {
+    "code": "KeyW",
+    "pressedAndReleased": true,
+    "hitCount": 1
+  },
+  "volumeControl": {
+    "keyboardValue": "0.5",
+    "analyserAt72PercentDbfs": -31,
+    "analyserAt0Percent": "−∞ dBFS",
+    "analyserAt50PercentDbfs": -30.3
+  },
+  "muteControl": {
+    "toggledOnAndOff": true,
+    "mutedPadStillRecordsHit": true,
+    "silentAnalyser": true
+  },
+  "overlappingHits": {
+    "simultaneousPads": [
+      "snare",
+      "crash"
+    ],
+    "hitCount": 2
+  },
+  "shortcutToggle": {
+    "disabledShortcutIgnored": true,
+    "pointerStillWorks": true
+  },
+  "nativeButtonKeys": {
+    "enterHits": 1,
+    "spaceHits": 1
+  },
+  "pointer": {
+    "clickHitOnce": true,
+    "pointerCancelReleased": true
+  },
+  "history": {
+    "capacity": 8,
+    "sessionTotal": 19,
+    "newestFirst": true
+  },
+  "mobile": {
+    "viewportWidth": 390,
+    "documentWidth": 390,
+    "padCount": 7,
+    "minimumTarget": 116
+  },
+  "axeMobile": {
+    "passes": 25,
+    "violations": [],
+    "incomplete": [
+      {
+        "id": "color-contrast",
+        "nodes": [
+          {
+            "target": [
+              ".brand-name"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+          },
+          {
+            "target": [
+              ".brand-name > span"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+          },
+          {
+            "target": [
+              ".session-chip > span:nth-child(2)"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+          },
+          {
+            "target": [
+              ".intro-block > .eyebrow"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+          },
+          {
+            "target": [
+              "#studio-title"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+          },
+          {
+            "target": [
+              ".intro-copy"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+          },
+          {
+            "target": [
+              ".counter-value"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+          },
+          {
+            "target": [
+              ".counter-label"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+          },
+          {
+            "target": [
+              ".instrument-heading > h2"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+          },
+          {
+            "target": [
+              ".keyboard-hint > span:nth-child(2)"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+          },
+          {
+            "target": [
+              ".drum-pad--tom.drum-pad:nth-child(1) > .pad-copy > .pad-name"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+          },
+          {
+            "target": [
+              ".drum-pad--tom.drum-pad:nth-child(1) > .pad-copy > .pad-status"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+          },
+          {
+            "target": [
+              ".drum-pad--tom.drum-pad:nth-child(2) > .pad-copy > .pad-name"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+          },
+          {
+            "target": [
+              ".drum-pad--tom.drum-pad:nth-child(2) > .pad-copy > .pad-status"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+          },
+          {
+            "target": [
+              ".drum-pad--tom.drum-pad:nth-child(3) > .pad-copy > .pad-name"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+          },
+          {
+            "target": [
+              ".drum-pad--tom.drum-pad:nth-child(3) > .pad-copy > .pad-status"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+          },
+          {
+            "target": [
+              ".drum-pad--tom.drum-pad:nth-child(4) > .pad-copy > .pad-name"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+          },
+          {
+            "target": [
+              ".drum-pad--tom.drum-pad:nth-child(4) > .pad-copy > .pad-status"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+          },
+          {
+            "target": [
+              ".drum-pad--snare > .pad-copy > .pad-name"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+          },
+          {
+            "target": [
+              ".drum-pad--snare > .pad-copy > .pad-status"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+          },
+          {
+            "target": [
+              ".drum-pad--crash > .pad-copy > .pad-name"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+          },
+          {
+            "target": [
+              ".drum-pad--crash > .pad-copy > .pad-status"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+          },
+          {
+            "target": [
+              ".drum-pad--kick > .pad-copy > .pad-name"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+          },
+          {
+            "target": [
+              ".drum-pad--kick > .pad-copy > .pad-status"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+          },
+          {
+            "target": [
+              ".hint-icon"
+            ],
+            "summary": "Fix any of the following:\n  Element content contains only non-text characters"
+          },
+          {
+            "target": [
+              ".hint-strip > p:nth-child(2)"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+          },
+          {
+            "target": [
+              "p:nth-child(4)"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+          },
+          {
+            "target": [
+              ".control-card > .card-heading > div > .eyebrow"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+          },
+          {
+            "target": [
+              "#control-title"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+          },
+          {
+            "target": [
+              ".card-icon"
+            ],
+            "summary": "Fix any of the following:\n  Element content contains only non-text characters"
+          },
+          {
+            "target": [
+              "label"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+          },
+          {
+            "target": [
+              ".volume-value"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+          },
+          {
+            "target": [
+              ".range-labels > span:nth-child(1)"
+            ],
+            "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+          },
+          {
+            "target": [
+              ".range-labels > span:nth-child(2)"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+          },
+          {
+            "target": [
+              ".range-labels > span:nth-child(3)"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+          },
+          {
+            "target": [
+              ".mute-icon"
+            ],
+            "summary": "Fix any of the following:\n  Element content contains only non-text characters"
+          },
+          {
+            "target": [
+              ".meter-heading > span"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+          },
+          {
+            "target": [
+              ".meter-reading"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+          },
+          {
+            "target": [
+              ".meter-scale > span:nth-child(1)"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+          },
+          {
+            "target": [
+              ".meter-scale > span:nth-child(2)"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+          },
+          {
+            "target": [
+              ".meter-scale > span:nth-child(3)"
+            ],
+            "summary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+          },
+          {
+            "target": [
+              ".setting-title"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+          },
+          {
+            "target": [
+              ".setting-subtitle"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+          },
+          {
+            "target": [
+              ".history-heading > div > .eyebrow"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+          },
+          {
+            "target": [
+              "#history-title"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+          },
+          {
+            "target": [
+              ".history-count"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+          },
+          {
+            "target": [
+              "li:nth-child(1) > .history-index[aria-hidden=\"true\"]"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+          },
+          {
+            "target": [
+              "li:nth-child(1) > .history-instrument.history-instrument--tom-2[aria-hidden=\"true\"]"
+            ],
+            "summary": "Fix any of the following:\n  Element content contains only non-text characters"
+          },
+          {
+            "target": [
+              "li:nth-child(1) > .history-name"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+          },
+          {
+            "target": [
+              "time[datetime=\"2026-11-02T04:29:37.516Z\"]"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+          },
+          {
+            "target": [
+              "li:nth-child(2) > .history-index[aria-hidden=\"true\"]"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+          },
+          {
+            "target": [
+              "li:nth-child(2) > .history-instrument.history-instrument--tom-2[aria-hidden=\"true\"]"
+            ],
+            "summary": "Fix any of the following:\n  Element content contains only non-text characters"
+          },
+          {
+            "target": [
+              "li:nth-child(2) > .history-name"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+          },
+          {
+            "target": [
+              "time[datetime=\"2026-11-02T04:29:37.114Z\"]"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+          },
+          {
+            "target": [
+              "li:nth-child(3) > .history-index[aria-hidden=\"true\"]"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+          },
+          {
+            "target": [
+              "li:nth-child(3) > .history-instrument.history-instrument--tom-2[aria-hidden=\"true\"]"
+            ],
+            "summary": "Fix any of the following:\n  Element content contains only non-text characters"
+          },
+          {
+            "target": [
+              "li:nth-child(3) > .history-name"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+          },
+          {
+            "target": [
+              "time[datetime=\"2026-11-02T04:29:36.713Z\"]"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+          },
+          {
+            "target": [
+              "li:nth-child(4) > .history-index[aria-hidden=\"true\"]"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+          },
+          {
+            "target": [
+              "li:nth-child(4) > .history-instrument.history-instrument--tom-2[aria-hidden=\"true\"]"
+            ],
+            "summary": "Fix any of the following:\n  Element content contains only non-text characters"
+          },
+          {
+            "target": [
+              "li:nth-child(4) > .history-name"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+          },
+          {
+            "target": [
+              "time[datetime=\"2026-11-02T04:29:36.283Z\"]"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+          },
+          {
+            "target": [
+              "li:nth-child(5) > .history-index[aria-hidden=\"true\"]"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+          },
+          {
+            "target": [
+              "li:nth-child(5) > .history-instrument.history-instrument--tom-2[aria-hidden=\"true\"]"
+            ],
+            "summary": "Fix any of the following:\n  Element content contains only non-text characters"
+          },
+          {
+            "target": [
+              "li:nth-child(5) > .history-name"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+          },
+          {
+            "target": [
+              "time[datetime=\"2026-11-02T04:29:35.880Z\"]"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+          },
+          {
+            "target": [
+              "li:nth-child(6) > .history-index[aria-hidden=\"true\"]"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+          },
+          {
+            "target": [
+              "li:nth-child(6) > .history-instrument.history-instrument--tom-2[aria-hidden=\"true\"]"
+            ],
+            "summary": "Fix any of the following:\n  Element content contains only non-text characters"
+          },
+          {
+            "target": [
+              "li:nth-child(6) > .history-name"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+          },
+          {
+            "target": [
+              "time[datetime=\"2026-11-02T04:29:35.482Z\"]"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+          },
+          {
+            "target": [
+              "li:nth-child(7) > .history-index[aria-hidden=\"true\"]"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+          },
+          {
+            "target": [
+              "li:nth-child(7) > .history-instrument.history-instrument--tom-2[aria-hidden=\"true\"]"
+            ],
+            "summary": "Fix any of the following:\n  Element content contains only non-text characters"
+          },
+          {
+            "target": [
+              "li:nth-child(7) > .history-name"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+          },
+          {
+            "target": [
+              "time[datetime=\"2026-11-02T04:29:35.065Z\"]"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+          },
+          {
+            "target": [
+              "li:nth-child(8) > .history-index[aria-hidden=\"true\"]"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+          },
+          {
+            "target": [
+              "li:nth-child(8) > .history-instrument.history-instrument--tom-2[aria-hidden=\"true\"]"
+            ],
+            "summary": "Fix any of the following:\n  Element content contains only non-text characters"
+          },
+          {
+            "target": [
+              "li:nth-child(8) > .history-name"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+          },
+          {
+            "target": [
+              "time[datetime=\"2026-11-02T04:29:34.667Z\"]"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+          },
+          {
+            "target": [
+              ".history-footer > span:nth-child(2)"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+          },
+          {
+            "target": [
+              "footer > span:nth-child(1)"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+          },
+          {
+            "target": [
+              "footer > span:nth-child(2)"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+          }
+        ]
+      },
+      {
+        "id": "label-content-name-mismatch",
+        "nodes": [
+          {
+            "target": [
+              ".switch"
+            ],
+            "summary": "Fix any of the following:\n  Text inside the element may be value text rather than a label"
+          }
+        ]
+      }
+    ]
+  },
+  "reducedMotion": {
+    "preference": "reduce",
+    "transitionDuration": "1e-05s"
+  },
+  "zoom200PercentReflowProxy": {
+    "viewportWidth": 720,
+    "documentWidth": 720,
+    "note": "720 CSS px viewport approximates a 1440 px desktop viewport at 200% browser zoom."
+  },
+  "runtime": {
+    "pageErrors": [],
+    "consoleErrors": [],
+    "failedRequests": []
+  },
+  "run": {
+    "url": "http://127.0.0.1:4173/MSIS207.R11.CTTT.Week3.Hw1/",
+    "timestamp": "2026-11-02T04:29:38.042Z",
+    "node": "v24.15.0",
+    "chrome": "156.0.8078.79",
+    "platform": "Windows_NT 10.0.26300 x64"
+  }
+}
